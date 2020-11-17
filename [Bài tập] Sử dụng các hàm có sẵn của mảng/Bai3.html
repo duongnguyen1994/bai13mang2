@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 3</title>
+</head>
+
+<body>
+    <script>
+        let string = prompt('Enter a text');
+        let upperStr = string.toUpperCase();
+        let result = [];
+        for (let i = 0; i < upperStr.length;i++) {
+            if (string[i] === upperStr[i]) {
+                result.push(string[i].toLowerCase())
+            }
+            else
+                result.push(string[i].toUpperCase());
+        }
+        console.log(result.join(''))
+    </script>
+</body>
+
+</html>
