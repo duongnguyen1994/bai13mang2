@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic tac toe</title>
+</head>
+
+<body>
+    <h3>Tic Tac toe</h3>
+    <hr>
+    <p id='board' style="padding-left: 20px;"></p>
+    <input type="button" id="add" value="X turn" onclick="addX()">
+    <input type="button" id="add" value="O turn" onclick="addO()">
+    <script>
+        let board = []
+        let data = '';
+        for (let i = 0; i < 3; i++) {
+            board[i] = new Array('*', '*', '*')
+        }
+        for (let i = 0; i < 3; i++) {
+            data += '<br><br>';
+            for (let j = 0; j < 3; j++) {
+                data += board[i][j] + '\xa0\xa0\xa0\xa0';
+            }
+        }
+        document.getElementById('board').innerHTML = data;
+        
+        // X turn
+        function addX() {
+            let posX1 = prompt('Nhập tọa độ X');
+            let posY1 = prompt('Nhập tọa độ Y');
+            board[posX1][posY1] = 'X';
+            let data = '';
+            let result1 = '';
+            let result2 = '';
+            let result3 = '';
+            let result4 = '';
+            let result5 = '';
+            let result6 = '';
+            let result7 = '';
+            let result8 = '';
+            for (let i = 0; i < 3; i++) {
+                data += '<br><br>';
+                for (let j = 0; j < 3; j++) {
+                    data += board[i][j] + '\xa0\xa0\xa0\xa0';
+                }
+            }  
+            document.getElementById('board').innerHTML = data;
+
+            for(let i =0;i<3;i++){
+                result1 +=board[0][i];
+                result2 +=board[1][i];
+                result3 +=board[2][i];
+                result4 +=board[i][0];
+                result5 +=board[i][1];
+                result6 +=board[i][2];
+                result7 +=board[i][i];
+                result8 +=board[2-i][i];
+                if(
+                result1=='XXX'||
+                result2=='XXX'||
+                result3=='XXX'||
+                result4=='XXX'||
+                result5=='XXX'||
+                result6=='XXX'||
+                result7=='XXX'||
+                result8=='XXX'){
+                    alert('X win')
+                }
+            }
+        }
+
+        // O turn
+        function addO() {
+            let posX1 = prompt('Nhập tọa độ X');
+            let posY1 = prompt('Nhập tọa độ Y');
+            board[posX1][posY1] = 'O';
+            let data = '';
+            let result1 = '';
+            let result2 = '';
+            let result3 = '';
+            let result4 = '';
+            let result5 = '';
+            let result6 = '';
+            let result7 = '';
+            let result8 = '';
+            for (let i = 0; i < 3; i++) {
+                data += '<br><br>';
+                for (let j = 0; j < 3; j++) {
+                    data += board[i][j] + '\xa0\xa0\xa0\xa0';
+                }
+            }  
+            document.getElementById('board').innerHTML = data;
+
+            for(let i =0;i<3;i++){
+                result1 +=board[0][i];
+                result2 +=board[1][i];
+                result3 +=board[2][i];
+                result4 +=board[i][0];
+                result5 +=board[i][1];
+                result6 +=board[i][2];
+                result7 +=board[i][i];
+                result8 +=board[2-i][i];
+                if(
+                result1=='OOO'||
+                result2=='OOO'||
+                result3=='OOO'||
+                result4=='OOO'||
+                result5=='OOO'||
+                result6=='OOO'||
+                result7=='OOO'||
+                result8=='OOO'){
+                    alert('O win')
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
