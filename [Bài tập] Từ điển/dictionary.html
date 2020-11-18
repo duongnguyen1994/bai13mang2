@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 4</title>
+</head>
+
+<body>
+    <div style="text-align: right;">
+        <input type="text" id="result">
+        <input type="button" onclick="Search()" value="Tìm kiếm">
+    </div>
+    <table>
+        <thead align="center">
+            <th>
+                <tr>
+                    <td>
+                        NEVER TELL A LIE
+                    </td>         
+                    <td>
+                        KHÔNG BAO GIỜ ĐƯỢC NÓI DỐI
+                    </td>
+                </tr>
+            </th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <pre>
+On his deathbed, a father advised his son to always speak truth.
+The son promised that he would never tell a lie.
+                    </pre>
+                </td>
+                <td>
+                    <pre>
+    Trong giờ phút cuối đời của mình, người cha đã khuyên con trai ông ấy 
+    phải luôn nói thật. Người con hứa rằng anh ấy sẽ không bao giờ nói dối.
+                    </pre>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        let eng = ['never', 'tell a lie', 'on his deathbed', 'a father', 'advised', 'his son', 'to always', 'speak', 'truth', 'the son', 'promised that', 'he', 'would'];
+        let vie = ['không bao giờ', 'nói dối', 'trong giờ phút cuối đời của mình', 'người cha', 'đã khuyên', 'con trai ông ấy', 'phải luôn', 'nói', 'thật', 'người con', 'hứa rằng', 'anh ấy', 'sẽ'];
+        function Search() {
+            let word = document.getElementById('result').value;
+            for (let i = 0; i < eng.length; i++) {
+                if (word == eng[i]) {
+                    alert(vie[i]);
+                    break;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
