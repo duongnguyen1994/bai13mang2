@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 3</title>
+</head>
+<body>
+    <script>
+        let arr = [];
+        let sum = 0;
+        for(let i = 0; i<20;i++){
+            arr[i] = Math.round(Math.random()*20 + 1);
+            sum += arr[i];
+        }
+        let max = Math.max.apply(Math, arr);
+        document.write(` Số lớn nhất là ${max}, giá trị trung bình của các phần tử trong mảng là ${sum/20}`)
+    </script>
+</body>
+</html>
